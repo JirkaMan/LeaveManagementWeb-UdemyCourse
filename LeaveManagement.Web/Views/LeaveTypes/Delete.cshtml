@@ -1,4 +1,4 @@
-﻿@model LeaveManagement.Web.Data.LeaveType
+﻿@model LeaveTypeVM
 
 @{
     ViewData["Title"] = "Delete";
@@ -23,23 +23,11 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DefaultDays)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateCreated)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DateCreated)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateModified)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DateModified)
-        </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index" class="btn btn-dark">Back to List</a> &nbsp;
+        <input type="submit" value="Delete" class="btn btn-danger" />
     </form>
 </div>
